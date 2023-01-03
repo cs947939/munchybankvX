@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<br>
+<br>
+
+<div class="card d-inline-block" style="width: 48rem;">
+    <br>
+
+    <form method="post">
+        <hr class="w-75 d-inline-block">
+        <h4>Request Transaction</h4>
+        <hr class="w-75 d-inline-block">
+        <br>
+        Username:
+        <input type="text" style="width: 20rem; font-family: 'Playfair Display';" name="user" value="{{request.user.username}}"><br>
+        <!-- <select name="r_user" style="width: 20rem; font-family: 'Playfair Display';">
+         <option style="width: 20rem; font-family: 'Playfair Display';">{{request.user.username}}</option>
+     </select> -->
+        <br>
+        <br>
+
+
+        Amount: <input type="text" style="width: 20rem; font-family: 'Playfair Display';" name="amount"><br>
+        <br>
+
+        Memo: <input type="text" style="width: 20rem; font-family: 'Playfair Display';" name="memo" placeholder="Enter Memo"><br>
+        <br>
+
+        <br>
+        <br>
+        <br>
+        {% csrf_token %}
+        <input type="submit" value="Submit Transaction Request" role="button" class="btn btn-primary w-75">
+        <br>
+        <br>
+
+    </form>
+
+</div>
+
+
+
+<br>
+<br>
+<br>
+{% endblock %}
